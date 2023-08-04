@@ -10,7 +10,19 @@ db = GroceryDB()
 @app.route('/grocery')
 def all_grocery():
     """Get all grocery"""
-    pass
+
+    html = """<table>
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Type</td>
+    </tr>
+    </table>"""
+
+    data = db.all()
+
+    return html
 
 
 # view add grocery
