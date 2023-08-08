@@ -27,6 +27,7 @@ class GroceryDB:
             list: A list of fruits of the specified type
         '''
         q = tinydb.Query()
+        print(q)
         return self.table.search(q.type == type)
 
     def get_by_name(self, name: str) -> list:
